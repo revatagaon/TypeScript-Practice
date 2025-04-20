@@ -12,6 +12,8 @@ userName = "Praveen";
 // Never return type in a Function
 function generateError(message: string, code: number): never {
   throw { message: message, errorCode: code };
+  // return "sdfsdds"; it will give an error because the function is never going to return a value.
+  // The return type of this function is never because it will always throw an error.
 }
 
 const res = generateError("Internal Server Error", 500);
